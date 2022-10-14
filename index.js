@@ -62,6 +62,12 @@ app.get("/get", async (req, res, next) => {
     var value= await animals.get(nameReq)
       res.json({msg:value});
     });
+//eliminar
+app.get("/del", async (req, res, next) => {
+    var nameReq=req.query.name.toString()
+    await animals.delete(nameReq)
+      res.json({msg:"delete"});
+    });
     
     
 
