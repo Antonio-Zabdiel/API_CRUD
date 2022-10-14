@@ -11,7 +11,7 @@ const db = CyclicDB("wild-plum-bunny-togaCyclicDB")
 
 const animals = db.collection("animals")
 
-async function test('should first', () => { second })(){
+async function test(){
     // create an item in collection with key "leo"
     let leo = await animals.set("leo", {
         type: "cat",
