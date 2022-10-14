@@ -43,6 +43,8 @@ app.get("/", async(req, res, next) => {
     test()
     //en el GET
     console.log(req.query.num)
+    var list = await animals.list()
+    console.log(JSON.parse(list))
     res.json({msg:"welcome :3"});
     await animals.list() //da toooooodooooooooooo
 });
