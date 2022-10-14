@@ -46,6 +46,7 @@ app.get("/", (req, res, next) => {
     res.json({msg:"welcome :3"});
 });
 
+collection.list() //da toooooodooooooooooo
     
 
 
