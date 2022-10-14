@@ -39,14 +39,15 @@ async function test(){
 test()
 
 //test
-app.get("/", (req, res, next) => {
+app.get("/", async(req, res, next) => {
     test()
     //en el GET
     console.log(req.query.num)
     res.json({msg:"welcome :3"});
+    await animals.list() //da toooooodooooooooooo
 });
 
-collection.list() //da toooooodooooooooooo
+
     
 
 
