@@ -38,7 +38,7 @@ async function test(){
 
 test()
 
-//test
+//test si no haces nada
 app.get("/", async(req, res, next) => {
     test()
     //en el GET
@@ -48,13 +48,21 @@ app.get("/", async(req, res, next) => {
     await animals.list() //da toooooodooooooooooo
 });
 
-
+//guardar
 app.get("/set", async (req, res, next) => {
     var nameReq=req.query.name
     var valueReq=req.query.value
     await animals.set(nameReq,{value:valueReq})
       res.json({msg:"set"});
 });
+
+//consulta
+app.get("/get", async (req, res, next) => {
+    var nameReq=req.query.name.toString()
+    var value= await animals.get(nameReq)
+      res.json({msg:value});
+    });
+    
     
 
 
