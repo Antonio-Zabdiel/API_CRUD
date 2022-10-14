@@ -23,7 +23,7 @@ async function test('should first', () => { second })(){
     console.log(item)
 }
 
-animals()
+test()
 
 
 
