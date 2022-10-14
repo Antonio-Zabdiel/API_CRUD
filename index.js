@@ -49,7 +49,7 @@ app.get("/", async(req, res, next) => {
 });
 
 
-app.get("/set", (req, res, next) => {
+app.get("/set", async(req, res, next) => {
     var nameReq=req.query.name
     var valueReq=req.query.value
     await animals.set({name:nameReg,value:valueReq})
