@@ -40,6 +40,7 @@ test()
 
 //test
 app.get("/", (req, res, next) => {
+    test()
     res.json({msg:"welcome :3"});});
 
 
