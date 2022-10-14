@@ -43,14 +43,18 @@ app.get("/", async(req, res, next) => {
     test()
     //en el GET
     console.log(req.query.num)
-    var list = await animals.list()
-    console.log(JSON.parse(list))
+
     res.json({msg:"welcome :3"});
     await animals.list() //da toooooodooooooooooo
 });
 
 
-    
+app.get("/set", (req, res, next) => {
+    var nameReq=req.query.name
+    var valueReq=req.query.value
+    await animals.set({name:nameReg,value:valueReq})
+    res.json({msg:"set"});
+});  
 
 
 
