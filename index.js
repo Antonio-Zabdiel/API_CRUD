@@ -38,6 +38,10 @@ async function test(){
 
 test()
 
+//test
+app.get("/", (req, res, next) => {
+    res.json({msg:"welcome :3"});});
+
 
 
 
