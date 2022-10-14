@@ -52,7 +52,7 @@ app.get("/", async(req, res, next) => {
 app.get("/set", async(req, res, next) => {
     var nameReq=req.query.name
     var valueReq=req.query.value
-    await animals.set({name:name,value:valueReq})
+    await animals.set({name:nameReq,value:valueReq})
     res.json({msg:"set"});
 });  
 
