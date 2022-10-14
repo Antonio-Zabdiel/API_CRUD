@@ -41,8 +41,12 @@ test()
 //test
 app.get("/", (req, res, next) => {
     test()
-    res.json({msg:"welcome :3"});});
+    //en el GET
+    console.log(req.query.num)
+    res.json({msg:"welcome :3"});
+});
 
+    
 
 
 
